@@ -22,7 +22,7 @@ export class QualificationsComponent implements OnInit {
   constructor(){ this.counter=""}
 
   ngOnInit():void{
-    setInterval(()=>    this.counter = this.update()
+    setInterval(()=>this.counter = this.update()
     , 1000);
   }
   update():string{
