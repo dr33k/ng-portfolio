@@ -40,10 +40,33 @@ html {
     height: fit-content;
   }
   
-  .image{
-    height: 20%;
+  #me-sm{
+    height: 30%;
     max-width: 20%;
   }
+
+  #me-lg{
+    height: 100%;
+    width: 100%;
+  }
+
+  #me-container{
+    height: 70%;
+    max-width: 90%;
+    padding: 10px;
+    }
+  @media (max-device-width: 400px) {
+    #me-sm{
+      height: 40%;
+      max-width: 50%;
+    }
+
+    #me-container{
+      height:fit-content;
+    }
+    
+  }
+
   .ellipsis{
     overflow:hidden;
     text-overflow: ellipsis;
