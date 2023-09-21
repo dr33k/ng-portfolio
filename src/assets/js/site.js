@@ -5,19 +5,19 @@
 $(document).ready(()=>{
     $("#me-sm")
     .hover(()=>{
-        $("#me-container").show()
+        $("#me-container-dialog").addClass("about-container")
     },
     ()=>{
-        $("#me-container").hide()
+        $("#me-container-dialog").removeClass("about-container")
     })
     .click(()=>{
-        $("#me-container").show()
+        $("#me-container-dialog").addClass("about-container")
     });
 
     $("#me-lg").hover(()=>{
-        $("#me-container").show()
+        $("#me-container-dialog").show()
     },
     ()=>{
-        $("#me-container").hide()
+        $("#me-container-dialog").hide()
     });
 });

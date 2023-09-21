@@ -1,0 +1,32 @@
+.about-container{
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: flex-end;
+}
+
+#me-sm{
+    height: 30%;
+    max-width: 20%;
+  }
+
+  #me-lg{
+    height: 100%;
+    width: 100%;
+  }
+
+  #me-container-dialog{
+    height: 70%;
+    max-width: 90%;
+    padding: 10px;
+    }
+  @media (max-device-width: 400px) {
+    #me-sm{
+      height: 40%;
+      max-width: 50%;
+    }
+
+    #me-container-dialog{
+      height:fit-content;
+    }
+    
+  }
