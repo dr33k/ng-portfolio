@@ -78,21 +78,18 @@
             <a class="nav-link active" data-bs-toggle="tab" href="#java" aria-selected="true" role="tab">Java</a>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link" data-bs-toggle="tab" href="#cs" aria-selected="false" role="tab" tabindex="-1">C#</a>
-        </li>
-        <li class="nav-item" role="presentation">
             <a class="nav-link" data-bs-toggle="tab" href="#ts" aria-selected="false" role="tab" tabindex="-1">Typescript</a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link" data-bs-toggle="tab" href="#sql" aria-selected="false" role="tab" tabindex="-1">SQL</a>
         </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#cs" aria-selected="false" role="tab" tabindex="-1">C#</a>
+        </li>
     </ul>
     <div class="tab-content pt-4 fs-4 mb-5">
         <div class="tab-pane fade active show" id="java" role="tabpanel">
             <span *ngFor="let skill of skills.java" class="badge rounded-pill align-content-middle bg-primary uppercase ms-2">{{skill}}</span>
-        </div>
-        <div class="tab-pane fade" id="cs" role="tabpanel">
-            <span *ngFor="let skill of skills.cs" class="badge rounded-pill bg-primary uppercase ms-2">{{skill}}</span>
         </div>
         <div class="tab-pane fade" id="ts" role="tabpanel">
             <span *ngFor="let skill of skills.ts" class="badge rounded-pill bg-primary uppercase ms-2">{{skill}}</span>
@@ -102,10 +99,13 @@
         <div class="tab-pane fade" id="sql" role="tabpanel">
             <span *ngFor="let skill of skills.sql" class="badge rounded-pill bg-primary uppercase ms-2">{{skill}}</span>
         </div>
+        <div class="tab-pane fade" id="cs" role="tabpanel">
+            <span *ngFor="let skill of skills.cs" class="badge rounded-pill bg-primary uppercase ms-2">{{skill}}</span>
+        </div>
     </div>
 
     <a class="btn btn-primary"
-    href="https://drive.google.com/file/d/1eh8pzOMQpi0F-ycJL0sI23Ffj2HSsH7M/view?usp=drive_link" target="_blank">DOWNLOAD MY RESUMÉ
+    href="https://drive.google.com/file/d/1-ff5BSVzW9hIuFTHSH-El-M90r8PCm5m/view?usp=drive_link" target="_blank">DOWNLOAD MY RESUMÉ
     <i class="bi bi-work"></i>
     </a>
 </div>
