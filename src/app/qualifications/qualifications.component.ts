@@ -14,8 +14,8 @@ export class QualificationsComponent implements OnInit {
   counter: any;
   skills: any = {
     java: ['spring boot', 'spring cloud', 'quarkus', 'hibernate orm', 'junit5', 'mockito', 'thymeleaf'],
-    cs: ['.net core 6', 'asp.net', 'entity framework', 'razor pages'],
     ts: ['node js', 'express', 'angular', 'prisma orm', 'jest', 'supertest'],
+    python: [],
     sql: ['postgresql', 'sql server']
   }
 
