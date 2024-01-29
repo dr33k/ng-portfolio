@@ -13,10 +13,10 @@ export class QualificationsComponent implements OnInit {
 
   counter: any;
   skills: any = {
-    java: ['spring boot', 'spring cloud', 'quarkus', 'hibernate orm', 'junit5', 'mockito', 'thymeleaf'],
+    java: ['spring boot', 'spring cloud', 'quarkus', 'hibernate orm', 'junit5', 'mockito'],
     ts: ['node js', 'express', 'angular', 'prisma orm', 'jest', 'supertest'],
-    python: [],
-    sql: ['postgresql', 'sql server']
+    python: ['vanilla python', 'django', 'chatbot'],
+    sql: ['postgresql', 'mysql']
   }
 
   constructor(){ this.counter=""}
@@ -24,9 +24,10 @@ export class QualificationsComponent implements OnInit {
   ngOnInit():void{
     setInterval(()=>this.counter = this.update()
     , 1000);
+
   }
   update():string{
-    const difference =moment.now().valueOf() - moment("2021-01-01").valueOf();
+    const difference =moment.now().valueOf() - moment("2022-05-01").valueOf();
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
