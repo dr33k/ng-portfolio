@@ -5,113 +5,74 @@
     </div>
     <p>Server-side (Backend) Software Engineer with {{counter}} of experience</p>
     <p>Click to view</p>
-    
+
+    <!--CARDS-->
     <div class="container">
         <div class="row justify-content-md-start justify-content-center">
-            <a class="col-md-4 card btn text-white bg-black m-2"
-            target="_blank"
-            href="https://drive.google.com/file/d/17ym5fgkXTI1A6F-tdj8Rciin73epSX2_/view?usp=sharing" 
-            style="max-width: 20rem;">
-                <div class="card-header fs-5">Java Certification <i class="bi bi-award-fill"></i></div>
-                <div class="card-body">
-                    <span class="fs-6">HIIT Plc Certified</span>
-                </div>
-            </a>
+            <a 
+            *ngFor="let cert of certificates" 
+            style="max-width: 20rem;"
+            [href]="cert.completed ? cert.link: '#qualifications'"
+            [ngClass]="cert.completed ? 
+            'col-md-4 card btn text-white bg-black m-2' : 
+            'col-md-4 btn card text-white bg-dark m-2'" 
+            [target]="cert.completed?'_blank':'_self' ">
 
-            <a class="col-md-4 card btn text-white bg-black m-2"
-            target="_blank"
-            href="https://drive.google.com/file/d/1k3GqZQzi3syAx_uTxkq8k-YzZ_8c-epz/view?usp=drive_link"
-            style="max-width: 20rem;">
-                <div class="card-header fs-5">Node JS Certification <i class="bi bi-award-fill"></i></div>
+                <div class="card-header fs-5">{{cert.name}} Certification <i class="bi bi-award-fill"></i></div>
                 <div class="card-body">
-                    <span class="fs-6">The Hong Kong University of Science and Technology Certified</span>
-                </div>
-            </a>
+                    <span *ngIf="cert.completed; then complete else incomplete"></span>
 
-            <a class="col-md-4 card btn text-white bg-black m-2"
-            target="_blank"
-            href="https://drive.google.com/file/d/1-SFTolBUT716AI9mqFB4V6Pltjr1qnhj/view?usp=drive_link"
-            style="max-width: 20rem; max-height:5%">
-                <div class="card-header fs-5">
-                    <div class="row">
-                       <div class="col-10 ellipsis">Angular Certification</div> <i class="col bi bi-award-fill justify-self-end"></i></div>
-                    </div>
-                <div class="card-body">
-                    <span class="fs-6">The Hong Kong University of Science and Technology Certified</span>
-                </div>
-            </a>
-
-        <div class="w-100"></div>
-
-            <a class="col-md-4 btn card text-white bg-dark m-2" style="max-width: 20rem;">
-                <div class="card-header fs-5">Spring Boot Spring Cloud Certification</div>
-                <div class="card-body">
-                    <span class="fs-6">IN PROGRESS</span>
-                </div>
-            </a>
-            <a class="col-md-4 btn card text-white bg-dark m-2" style="max-width: 20rem;">
-                <div class="card-header fs-5">Django Framework Development Certification </div>
-                <div class="card-body">
-                    <span class="fs-6">IN PROGRESS</span>
-                </div>
-            </a>
-            <a class="col-md-4 btn card text-white bg-dark m-2" style="max-width: 20rem;">
-                <div class="card-header fs-5">Cybersecurity Professional Certification </div>
-                <div class="card-body">
-                    <span class="fs-6">IN PROGRESS</span>
+                    <ng-template #complete ><span class="fs-6" >{{cert.authority}} Certified</span></ng-template>
+                    <ng-template #incomplete><span class="fs-6" >In Progress</span></ng-template>
                 </div>
             </a>
         </div>
-    </div>    
-    <blockquote class="mt-3 mb-3">    
+
+        <!--SUMMARY-->
+        <blockquote class="mt-3 mb-3">
             <p>I pride myself on doing the work people consider difficult or complex and
                 that owes to the the fact that I like a challenge.
             </p>
-            <p> 
+            <p>
                 Problem solving is my forté if I had to summarize.
                 <br>
-                I always get tasks done to the best of my ability and ask for help accordingly. 
+                I always get tasks done to the best of my ability and ask for help accordingly.
                 If such help cannot be provided, I work around my problem and profer a solution.
                 <br>
-                Independence is a trait of mine  as well and adaptability is a skill I possess so I work
+                Independence is a trait of mine as well and adaptability is a skill I possess so I work
                 productively in a team.
             </p>
             <p>Here are my other skills:</p>
-    </blockquote>
+        </blockquote>
 
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" data-bs-toggle="tab" href="#java" aria-selected="true" role="tab">Java</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" data-bs-toggle="tab" href="/home#python" aria-selected="false" role="tab" tabindex="-1">Python</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" data-bs-toggle="tab" href="/home#ts" aria-selected="false" role="tab" tabindex="-1">Typescript</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" data-bs-toggle="tab" href="#sql" aria-selected="false" role="tab" tabindex="-1">SQL</a>
-        </li>
-    </ul>
-    <div class="tab-content pt-4 fs-4 mb-5">
-        <div class="tab-pane fade active show" id="java" role="tabpanel">
-            <span *ngFor="let skill of skills.java" class="badge rounded-pill bg-primary uppercase ms-2">{{skill}}</span>
+        <!--SKILL TABS-->
+        <ul class="nav nav-tabs" role="tablist">
+            <li *ngFor="let skill of skills" class="nav-item" role="presentation">
+                <a [ngClass]="skill.name == 'java' ? 'nav-link active text-capitalize' : 'nav-link text-capitalize'" data-bs-toggle="tab" [href]="'#' + skill.name" role="tab">{{skill.name}}</a>
+            </li>
+        </ul>
+
+        <!--SKILLS-->
+        <div class="tab-content pt-4 fs-4 mb-5">
+            <div 
+            *ngFor="let skill of skills"
+            [ngClass]="skill.name == 'java'? 'tab-pane fade active show' : 'tab-pane fade'" 
+            id={{skill.name}} 
+            role="tabpanel">
+                <span 
+                *ngFor="let sub_skill of skill.values"
+                    class="badge rounded-pill bg-primary uppercase ms-2">
+                    {{sub_skill}}
+                </span>
+            </div>
         </div>
-        <div class="tab-pane fade" id="python" role="tabpanel">
-            <span *ngFor="let skill of skills.python" class="badge rounded-pill bg-primary uppercase ms-2">{{skill}}</span>
-        </div>
-        <div class="tab-pane fade" id="ts" role="tabpanel">
-            <span *ngFor="let skill of skills.ts" class="badge rounded-pill bg-primary uppercase ms-2">{{skill}}</span>
-            <br>
-            <small><i class="bi bi-circle-fill text-info fs-6"></i>This is an Angular 16 application </small>
-        </div>
-        <div class="tab-pane fade" id="sql" role="tabpanel">
-            <span *ngFor="let skill of skills.sql" class="badge rounded-pill bg-primary uppercase ms-2">{{skill}}</span>
+
+        <!--RESUME-->
+        <div class="row">
+            <a class="btn btn-primary col"
+                href={{resume_link}}
+                target="_blank">VIEW MY RESUMÉ
+                <i class="bi bi-work"></i>
+            </a>
         </div>
     </div>
-
-    <a class="btn btn-primary"
-    href="https://drive.google.com/file/d/1_q2dBTL905teI3rReXC6HY-uZvI6eeBV/view?usp=sharing" target="_blank">VIEW MY RESUMÉ
-    <i class="bi bi-work"></i>
-    </a>
-</div>
