@@ -16,7 +16,7 @@
             [ngClass]="cert.completed ? 
             'col-md-4 card btn text-white bg-black m-2' : 
             'col-md-4 btn card text-white bg-dark m-2'" 
-            [target]="cert.completed?'_blank':'_self' ">
+            [target]="cert.completed?'_blank':'_self'">
 
                 <div class="card-header fs-5">{{cert.name}} Certification <i class="bi bi-award-fill"></i></div>
                 <div class="card-body">
@@ -48,20 +48,22 @@
         <!--SKILL TABS-->
         <ul class="nav nav-tabs" role="tablist">
             <li *ngFor="let skill of skills" class="nav-item" role="presentation">
-                <a [ngClass]="skill.name == 'java' ? 'nav-link active text-capitalize' : 'nav-link text-capitalize'" data-bs-toggle="tab" [href]="'#' + skill.name" role="tab">{{skill.name}}</a>
+                <a [ngClass]="skill.name == 'java' ? 'nav-link active text-capitalize' : 'nav-link text-capitalize'" data-bs-toggle="tab"  routerLink="/home" [href]="'#' + skill.name" role="tab">{{skill.name}}</a>
             </li>
         </ul>
 
         <!--SKILLS-->
-        <div class="tab-content pt-4 fs-4 mb-5">
+        <div id="myTabContent" class="tab-content pt-4 fs-4 mb-5" bis_skin_checked="1">
             <div 
             *ngFor="let skill of skills"
             [ngClass]="skill.name == 'java'? 'tab-pane fade active show' : 'tab-pane fade'" 
             id={{skill.name}} 
-            role="tabpanel">
+            role="tabpanel"
+            bis_skin_checked="1"
+            >
                 <span 
                 *ngFor="let sub_skill of skill.values"
-                    class="badge rounded-pill bg-primary uppercase ms-2">
+                    class="badge rounded-pill bg-primary text-uppercase ms-2">
                     {{sub_skill}}
                 </span>
             </div>

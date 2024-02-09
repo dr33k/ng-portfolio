@@ -1,23 +1,9 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿window.onscroll = function() {scrollFunction()};
 
-// Write your JavaScript code.
-$(document).ready(()=>{
-    $("#me-sm")
-    .hover(()=>{
-        $("#me-container-dialog").addClass("about-container")
-    },
-    ()=>{
-        $("#me-container-dialog").removeClass("about-container")
-    })
-    .click(()=>{
-        $("#me-container-dialog").addClass("about-container")
-    });
-
-    $("#me-lg").hover(()=>{
-        $("#me-container-dialog").show()
-    },
-    ()=>{
-        $("#me-container-dialog").hide()
-    });
-});
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}

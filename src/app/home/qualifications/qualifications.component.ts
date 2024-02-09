@@ -5,11 +5,6 @@ import { CertStruct, SkillStruct } from './qualifications.type';
 @Component({
   selector: 'app-qualifications',
   templateUrl: './qualifications.component.html',
-  styles: [`
-  .uppercase{
-    text-transform: uppercase
-  }
-  `]
 })
 export class QualificationsComponent implements OnInit {
 
@@ -25,7 +20,7 @@ export class QualificationsComponent implements OnInit {
     },
     {
       name: 'typescript',
-      values: ['node js', 'express', 'angular', 'prisma orm', 'jest', 'supertest']
+      values: ['node', 'express', 'angular', 'prisma orm', 'jest', 'supertest']
     },
     {
       name: 'sql',
