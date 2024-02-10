@@ -46,6 +46,12 @@ export class QualificationsComponent implements OnInit {
       link: 'https://drive.google.com/file/d/1vw7PgbAaxWkMeR-LF2MlwlGg8uSVoT-l/view?usp=sharing',
     },
     {
+      name: 'Foundations of Cybersecurity',
+      authority: 'Google',
+      completed: true,
+      link: "https://drive.google.com/file/d/1nnG4tccN3BRyiKjN9gADPb79_A_OCl4w/view?usp=sharing"
+    },
+    {
       name: 'Node',
       authority: 'The Hong Kong University Of Science and Technology',
       completed: true,
@@ -57,14 +63,11 @@ export class QualificationsComponent implements OnInit {
       completed: true,
       link: 'https://drive.google.com/file/d/1-SFTolBUT716AI9mqFB4V6Pltjr1qnhj/view?usp=drive_link',
     },
-    {
-      name: 'Cybersecurity Professional',
-      authority: 'Google',
-      completed: false,
-    },
+
   ]
 
-  resume_link = "https://drive.google.com/file/d/1_q2dBTL905teI3rReXC6HY-uZvI6eeBV/view?usp=sharing"
+  resume_link = "https://drive.google.com/file/d/1UrfvvDdshthZbAPVWMD0zfFLqhX51P-m/view?usp=sharing"
+  turing_img = "assets/img/turing.png"
 
   constructor(){ this.counter=""}
 
