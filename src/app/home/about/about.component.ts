@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls:['./about.component.css']
 })
 export class AboutComponent {
-
+my_photo: string = "assets/img/me.jpg"
 }

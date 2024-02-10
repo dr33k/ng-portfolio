@@ -16,7 +16,7 @@ export class QualificationsComponent implements OnInit {
     },
     {
       name: 'python',
-      values: ['vanilla python', 'django', 'chatbot']
+      values: ['vanilla python', 'django', 'chatbots']
     },
     {
       name: 'typescript',
@@ -74,7 +74,7 @@ export class QualificationsComponent implements OnInit {
 
   }
   update():string{
-    const difference =moment.now().valueOf() - moment("2022-05-01").valueOf();
+    const difference =moment.now() - moment("2022-05-01").valueOf();
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

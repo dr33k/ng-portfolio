@@ -3,7 +3,7 @@
         <div class="col pb-3">QUALIFICATIONS</div>
         <i class="col-1 bi bi-bookmark-check-fill"></i>
     </div>
-    <p>Server-side (Backend) Software Engineer with {{counter}} of experience</p>
+    <p>Software and DevOps Engineer with {{counter}} of experience</p>
     <p>Click to view</p>
 
     <!--CARDS-->
@@ -48,7 +48,7 @@
         <!--SKILL TABS-->
         <ul class="nav nav-tabs" role="tablist">
             <li *ngFor="let skill of skills" class="nav-item" role="presentation">
-                <a [ngClass]="skill.name == 'java' ? 'nav-link active text-capitalize' : 'nav-link text-capitalize'" data-bs-toggle="tab"  routerLink="/home" [href]="'#' + skill.name" role="tab">{{skill.name}}</a>
+                <a [ngClass]="skill.name == 'java' ? 'nav-link active text-capitalize' : 'nav-link text-capitalize'" data-bs-toggle="tab" [href]="'#' + skill.name" role="tab">{{skill.name}}</a>
             </li>
         </ul>
 
@@ -74,7 +74,6 @@
             <a class="btn btn-primary col"
                 href={{resume_link}}
                 target="_blank">VIEW MY RESUMÉ
-                <i class="bi bi-work"></i>
             </a>
         </div>
     </div>
