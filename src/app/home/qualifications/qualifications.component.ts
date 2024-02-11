@@ -66,7 +66,7 @@ export class QualificationsComponent implements OnInit {
 
   ]
 
-  resume_link = "https://drive.google.com/file/d/1UrfvvDdshthZbAPVWMD0zfFLqhX51P-m/view?usp=sharing"
+  resume_link = "https://drive.google.com/file/d/10B0JiCNJnI9ewlmStHI47sdoXR5_H3ct/view?usp=sharing"
   turing_img = "assets/img/turing.png"
 
   constructor(){ this.counter=""}
