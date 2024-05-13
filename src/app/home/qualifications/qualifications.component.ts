@@ -4,7 +4,7 @@ import { CertStruct, SkillStruct } from './qualifications.type';
 
 @Component({
   selector: 'app-qualifications',
-  templateUrl: './qualifications.component.html',
+  templateUrl: './qualifications.component.html'
 })
 export class QualificationsComponent implements OnInit {
 
@@ -16,18 +16,22 @@ export class QualificationsComponent implements OnInit {
     },
     {
       name: 'python',
-      values: ['vanilla python', 'django', 'chatbots']
+      values: ['vanilla python', 'django']
     },
     {
       name: 'typescript',
       values: ['node', 'express', 'angular', 'prisma orm', 'jest', 'supertest']
     },
     {
-      name: 'sql',
+      name: 'AWS',
+      values: ['EC2', 'Elastic Beanstalk', 'S3', 'RDS', 'CodePipeline', 'CodeBuild', 'ECR']
+    },
+    {
+      name: 'SQL',
       values: ['postgresql', 'mysql']
     },
     {
-      name: 'nosql',
+      name: 'NoSQL',
       values: ['mongodb']
     }
   ]
@@ -66,7 +70,7 @@ export class QualificationsComponent implements OnInit {
 
   ]
 
-  resume_link = "https://drive.google.com/file/d/10B0JiCNJnI9ewlmStHI47sdoXR5_H3ct/view?usp=sharing"
+  resume_link = "https://drive.google.com/file/d/1DHFz8eOKZ9ynrno9Jh2qCDiPBgTGIWhU/view?usp=sharing"
   turing_img = "assets/img/turing.png"
 
   constructor(){ this.counter=""}
